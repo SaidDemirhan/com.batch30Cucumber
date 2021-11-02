@@ -20,7 +20,6 @@ public class AmazonPage {
     public WebElement sonucYazisiElementi;
 
 
-    @FindBy(xpath = "")
-    public WebElement bos;
+
 }
 
