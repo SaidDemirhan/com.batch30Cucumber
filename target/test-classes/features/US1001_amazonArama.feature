@@ -1,3 +1,5 @@
+@Paralel1
+
 Feature: US1001 amazon arama
 
   @amazon @nutella

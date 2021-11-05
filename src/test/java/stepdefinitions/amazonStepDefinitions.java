@@ -10,13 +10,16 @@ import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class AmazonStepDefinitions {
+public class amazonStepDefinitions {
     AmazonPage amazonPage=new AmazonPage();
 
     @When("kullanici amazon sayfasina gider")
     public void kullanici_amazon_sayfasina_gider() {
+
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
     }
+
+
     @When("nutella icin arama yapar")
     public void nutella_icin_arama_yapar() {
         amazonPage.aramaKutusu.sendKeys("Nutella"+ Keys.ENTER);
@@ -43,6 +46,7 @@ public class AmazonStepDefinitions {
     }
     @When("ipad icin arama yapar")
     public void ipad_icin_arama_yapar() {
+
         amazonPage.aramaKutusu.sendKeys("ipad"+ Keys.ENTER);
     }
     @Then("sonucun ipad icerdigini test eder")
@@ -53,19 +57,29 @@ public class AmazonStepDefinitions {
     @And("{string} icin arama yapar")
     public void icinAramaYapar(String arananKelime) {
 
-            amazonPage.aramaKutusu.sendKeys("ipad"+ Keys.ENTER);
-
-
+        amazonPage.aramaKutusu.sendKeys(arananKelime+ Keys.ENTER);
     }
 
     @Then("sonucun {string} icerdigini test eder")
     public void sonucunIcerdiginiTestEder(String arananKelime) {
-        Assert.assertTrue(amazonPage.sonucYazisiElementi.getText().contains(arananKelime));
 
+        Assert.assertTrue(amazonPage.sonucYazisiElementi.getText().contains(arananKelime));
     }
 
     @Given("kullanici {string} sayfasina gider")
-    public void kullaniciSayfasinaGider(String adreseGit) {
-        Driver.getDriver().get(ConfigReader.getProperty("istenenUrl"));
+    public void kullaniciSayfasinaGider(String istenenUrl) {
+
+        Driver.getDriver().get(ConfigReader.getProperty(istenenUrl));
+    }
+
+    @And("sonuc sayisini yazdirir")
+    public void sonucSayisiniYazdirir() {
+        System.out.println(amazonPage.sonucYazisiElementi.getText());
+    }
+
+    @Then("basligin {string} icerdigini test eder")
+    public void basliginIcerdiginiTestEder(String arananKelime) {
+
+        Assert.assertTrue(Driver.getDriver().getTitle().contains(arananKelime));
     }
 }
