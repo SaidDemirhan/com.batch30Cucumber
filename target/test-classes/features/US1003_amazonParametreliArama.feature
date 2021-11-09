@@ -1,4 +1,4 @@
-@paralel2
+@Paralel2
 Feature: US1003 kullanici istedigi kelime icin arama yapip, sonucu test eder
 
   @rapor2

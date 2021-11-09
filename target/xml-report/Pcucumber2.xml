@@ -1,2 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="0.062"/>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="68.446">
+    <testcase classname="US1003 kullanici istedigi kelime icin arama yapip, sonucu test eder" name="TC07 istenen kelimenin oldugunu test etme" time="11.944">
+        <failure message="" type="java.lang.AssertionError">
+            <![CDATA[Given kullanici "amazonUrl" sayfasina gider.................................passed
+And "armut" icin arama yapar................................................passed
+Then sonucun "elma" icerdigini test eder....................................failed
+And sayfayi kapatir.........................................................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.amazonStepDefinitions.sonucunIcerdiginiTestEder(amazonStepDefinitions.java:66)
+	at ✽.sonucun "elma" icerdigini test eder(file:///C:/Users/ASD/IdeaProjects/com.batch30Cucumber/src/test/resources/features/US1003_amazonParametreliArama.feature:8)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="US1005 amazonda liste ile arama" name="TC09 amazonda verilen bir listeyi aratip, var olduklarini test ediniz" time="11.178">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" sayfasina gider.................................passed
+Then "nutella" icin arama yapar.............................................passed
+And sonuc sayisini yazdirir.................................................passed
+And sonucun "nutella" icerdigini test eder..................................passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1005 amazonda liste ile arama" name="TC09 amazonda verilen bir listeyi aratip, var olduklarini test ediniz 2" time="11.759">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" sayfasina gider.................................passed
+Then "java" icin arama yapar................................................passed
+And sonuc sayisini yazdirir.................................................passed
+And sonucun "java" icerdigini test eder.....................................passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1005 amazonda liste ile arama" name="TC09 amazonda verilen bir listeyi aratip, var olduklarini test ediniz 3" time="11.966">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" sayfasina gider.................................passed
+Then "ipod" icin arama yapar................................................passed
+And sonuc sayisini yazdirir.................................................passed
+And sonucun "ipod" icerdigini test eder.....................................passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1005 amazonda liste ile arama" name="TC09 amazonda verilen bir listeyi aratip, var olduklarini test ediniz 4" time="10.163">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" sayfasina gider.................................passed
+Then "armut" icin arama yapar...............................................passed
+And sonuc sayisini yazdirir.................................................passed
+And sonucun "armut" icerdigini test eder....................................passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US1005 amazonda liste ile arama" name="TC09 amazonda verilen bir listeyi aratip, var olduklarini test ediniz 5" time="11.184">
+        <system-out>
+            <![CDATA[Given kullanici "amazonUrl" sayfasina gider.................................passed
+Then "Apple" icin arama yapar...............................................passed
+And sonuc sayisini yazdirir.................................................passed
+And sonucun "Apple" icerdigini test eder....................................passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
