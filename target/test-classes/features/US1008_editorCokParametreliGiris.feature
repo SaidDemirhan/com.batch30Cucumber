@@ -5,6 +5,16 @@ Feature: US1008 coklu parametreli bir step ile editor kisi ekler
 
     Given kullanici "editorUrl" sayfasina gider
     Then new butonuna basar
+
+    #And editor firstname kutusuna "<firstName>" bilgileri girer
+    #And editor lastname kutusuna "<lastName>" bilgileri girer
+    #And editor position kutusuna "<position>" bilgileri girer
+    #And editor office kutusuna "<office>" bilgileri girer
+    #And editor extension kutusuna "<extension>" bilgileri girer
+    #And editor startdate kutusuna "<startDate>" bilgileri girer
+    #And editor salary kutusuna "<salary>" bilgileri girer
+    #yazilabilecegi gibi asagidaki sekilde de yazilabilir.
+
     And ilgili kutulara "<firstName>"  "<lastName>"  "<position>"  "<office>"  "<extension>" "<startDate>" "<salary>" bilgilerini girer
     And Create tusuna basar
 

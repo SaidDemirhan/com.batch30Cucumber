@@ -69,7 +69,7 @@ public class EditorStepDefinitions {
                 sendKeys(salary).
                 click(editorPage.createButton).perform();
 
-
+//yetisemezse tab lar problem olabiliyor.
 
     }
 
