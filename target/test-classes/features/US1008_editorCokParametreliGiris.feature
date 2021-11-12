@@ -13,7 +13,7 @@ Feature: US1008 coklu parametreli bir step ile editor kisi ekler
     #And editor extension kutusuna "<extension>" bilgileri girer
     #And editor startdate kutusuna "<startDate>" bilgileri girer
     #And editor salary kutusuna "<salary>" bilgileri girer
-    #yazilabilecegi gibi asagidaki sekilde de yazilabilir.
+    #yazilabilecegi gibi asagidaki sekilde de yazilabilir.Bir sonraki testte yapilacak
 
     And ilgili kutulara "<firstName>"  "<lastName>"  "<position>"  "<office>"  "<extension>" "<startDate>" "<salary>" bilgilerini girer
     And Create tusuna basar
@@ -22,5 +22,5 @@ Feature: US1008 coklu parametreli bir step ile editor kisi ekler
     Examples:
       |firstName| lastName|position|office|extension|startDate|salary|
       |Hakan    |Tetik    |TestLead|Paris |ali      |2021-01-21|60000|
-      |Murat    |Ercoban  |QA      |Kenya |126      |2021/01/20|40000|
-      |Furkan   |Yilmaz   |QA      |Adana |130      |2021.03.21|80.000|
+      |Murat    |Ercoban  |QA      |Kenya |126      |2021-01-20|40000|
+      |Furkan   |Yilmaz   |QA      |Adana |130      |2021-03-21|80000|

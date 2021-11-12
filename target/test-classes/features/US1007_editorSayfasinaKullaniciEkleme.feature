@@ -18,5 +18,5 @@ Feature: US1007 editor sayfasina farkli kullanicilar ekleyebilmeliyim
     Examples:
       |firstName| lastName|position|office|extension|startDate|salary|
       |Hakan    |Tetik    |TestLead|Paris |124      |2021-01-21|60000|
-      |Murat    |Ercoban  |QA      |Kenya |126      |2021/01/20|40000|
-      |Furkan   |Yilmaz   |QA      |Adana |130      |2021.03.21|80.000|
+      |Murat    |Ercoban  |QA      |Kenya |126      |2021-01-20|40000|
+      |Furkan   |Yilmaz   |QA      |Adana |130      |2021-03-21|80000|
