@@ -1,8 +1,11 @@
 package dbStepdefinitions;
 
 import io.cucumber.java.en.Given;
+import org.junit.Assert;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class DbStepDefinition {
@@ -31,6 +34,69 @@ public class DbStepDefinition {
         // resultset iterator gibi calisir
         resultSet.first();
         System.out.println(resultSet.getObject(field).toString());
+
+
+        System.out.println(resultSet.next()); //true
+        //resultSet.next() methodu bir sonraki objeye kursörü gecirir. sonraki eleman varsa true yoksa false döner.
+
+        System.out.println(resultSet.getObject(field).toString());
+
+        resultSet.last();
+        System.out.println(resultSet.next());//false
+        //sonn objeye gider ve sonra resultset.next() methodunu calistirirsak bir sonraki eleman olmayacagi icin
+        // kursör ayni yerde kalir ve false döner.
+
+        //Eger tüm listeyi yazdirmak istersek;
+        //while loop ile birlikte resultset.next() kullanabiliriz.
+        //cunku resultset.Next() bir sonraki obje var oldugu sürece true dönecegi iccin devam edecek
+        //son objeye varinca false olacagi icin while loop bitecek
+
+        //41. satirda (resultSet.last();)son objeye gitmistik
+        //eger su an calistirirsak hicbir sey yazdirmaz
+         //bu yuzden kursörü basa almaliyiz.
+
+        /*
+
+        resultSet.first();
+        //birinci objeye geldik ama  alttaki ((resultSet.next())) yazdirmadan sonraki elemana gecirmis oldu
+
+        while (resultSet.next()){
+            System.out.println(resultSet.getObject(field).toString());
+        }
+
+
+         */
+
+      /*  resultSet.absolute(0);
+        while (resultSet.next()){
+           System.out.println(resultSet.getObject(field).toString());
+        }
+      */
+        //Bende null pointer exception verdigi icin yorum icine aldim
+
+
+        //Eger varsa ilk 100 fiyati listelemek istersek(integer olarak bir liste)
+
+        int sayac=1;
+
+        resultSet.absolute(0);
+
+        List<Double> ilkYuzSayi= new ArrayList<>();
+        while (sayac<=100&& resultSet.next()){
+            ilkYuzSayi.add(resultSet.getDouble(field));
+            sayac++;
+        }
+        System.out.println(ilkYuzSayi);
+
+
+        //7.Fiyatin double olarak 620.0 oldugunu test edin
+
+
+        resultSet.absolute(7);
+        double yedinciSayi= resultSet.getDouble(field);
+
+        Assert.assertTrue(yedinciSayi==620);
+
 
     }
 }
