@@ -24,3 +24,31 @@ Feature: GMIBank Guvenli Sifre
       |passwordOrange|
       |11AA    |
       |AA22    |
+
+  Scenario Outline: Password Yellow Test
+    Given "<passwordYellow>" girer
+    Then gmibank Password strength yellow gorunur
+
+    Examples:
+      |passwordYellow|
+      |11AAaa    |
+      |AA22aa    |
+
+  Scenario Outline: Password Lightgreen Test
+    Given "<passwordLightGreen>" girer
+    Then gmibank Password strength lightgreen gorunur
+
+    Examples:
+      |passwordLightGreen|
+      |1Aa+    |
+      |A2a+    |
+
+  Scenario Outline: Password Green Test
+    Given "<passwordGreen>" girer
+    Then gmibank Password strength green gorunur
+
+    Examples:
+      |passwordGreen|
+      |1Aa+A!a    |
+      |A2a+B!b    |
+

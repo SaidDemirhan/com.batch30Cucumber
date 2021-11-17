@@ -1,7 +1,9 @@
 package runners;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin={"html:target\\cucumber-reports.html",
@@ -10,7 +12,12 @@ import org.junit.runner.RunWith;
         features="src/test/resources/features",
         glue="dbStepdefinitions",
         tags="@db"  ,
+
         dryRun= false
+
 )
+
+
+
 public class DbRunner {
 }
