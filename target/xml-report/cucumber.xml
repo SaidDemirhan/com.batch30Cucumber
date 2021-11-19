@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.324">
-    <testcase classname="US1012 Kullanici DB Utill ile concort Hotel database'ini test eder" name="TC19 Concort Hotel Database Read Test" time="0.058">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given kullanici DBUill ile CHQA database'ine baglanir.......................undefined
-And kullanici DBUill ile "tHOTELROOM" tablosundaki "Price" verilerini alir..skipped
-And kullanici DBUill ile "Price" sutunundaki verileri okur ve istedigi islemleri yapar.skipped
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="2.489">
+    <testcase classname="US1013 Kullanici DB Util ile concort Hotel database'ini test eder" name="Kullanici tHOTEL tablosundan istedigi Emaili update eder" time="2.291">
+        <system-out>
+            <![CDATA[Given kullanici DBUtill ile CHQA database'ine baglanir......................passed
+Then DBU IDHotel degeri 1024 olan kaydin Email degerini "buisbukadar@gmail.com" yapar.passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>

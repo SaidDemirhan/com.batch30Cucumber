@@ -3,53 +3,59 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-11-18T18:12:02.398Z",
-        "line": 3,
-        "name": "TC19 Concort Hotel Database Read Test",
+        "start_timestamp": "2021-11-19T11:22:20.671Z",
+        "line": 12,
+        "name": "Kullanici tHOTEL tablosundan istedigi Emaili update eder",
         "description": "",
-        "id": "us1012-kullanici-db-utill-ile-concort-hotel-database-ini-test-eder;tc19-concort-hotel-database-read-test",
+        "id": "us1013-kullanici-db-util-ile-concort-hotel-database-ini-test-eder;kullanici-thotel-tablosundan-istedigi-emaili-update-eder",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 1577515200,
+              "status": "passed"
             },
-            "line": 5,
-            "name": "kullanici DBUill ile CHQA database\u0027ine baglanir",
-            "match": {},
+            "line": 13,
+            "name": "kullanici DBUtill ile CHQA database\u0027ine baglanir",
+            "match": {
+              "location": "dbStepdefinitions.DbUtilStepDefinitions.kullanici_db_utill_ile_chqa_database_ine_baglanir()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 655887100,
+              "status": "passed"
             },
-            "line": 6,
-            "name": "kullanici DBUill ile \"tHOTELROOM\" tablosundaki \"Price\" verilerini alir",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1076500,
-              "status": "skipped"
+            "line": 14,
+            "name": "DBU IDHotel degeri 1024 olan kaydin Email degerini \"buisbukadar@gmail.com\" yapar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1024",
+                  "offset": 19
+                },
+                {
+                  "val": "\"buisbukadar@gmail.com\"",
+                  "offset": 51
+                }
+              ],
+              "location": "dbStepdefinitions.DbUtilStepDefinitions.dbuIDHotelDegeriOlanKaydinEmailDegeriniYapar(int,java.lang.String)"
             },
-            "line": 7,
-            "name": "kullanici DBUill ile \"Price\" sutunundaki verileri okur ve istedigi islemleri yapar",
-            "match": {},
-            "keyword": "And "
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@dbutill"
+            "name": "@dbupdate"
           }
         ]
       }
     ],
-    "name": "US1012 Kullanici DB Utill ile concort Hotel database\u0027ini test eder",
+    "name": "US1013 Kullanici DB Util ile concort Hotel database\u0027ini test eder",
     "description": "",
-    "id": "us1012-kullanici-db-utill-ile-concort-hotel-database-ini-test-eder",
+    "id": "us1013-kullanici-db-util-ile-concort-hotel-database-ini-test-eder",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/US1013_DbUtilTestler.feature",
     "tags": []
